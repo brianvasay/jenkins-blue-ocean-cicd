@@ -22,7 +22,7 @@ pipeline {
          }
          stage('Upload to AWS') {
               steps {
-                  withAWS(role: 'iam-role-ec2-to-s3-access-role') {
+                  withAWS(region:'us-east-2',credentials:'	iam-user-devt-bvasay-devops') {
                   sh 'echo "Uploading content with AWS creds"'
                       s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'devt-bvasay-jenkins-pipeline')
                   }

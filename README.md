@@ -10,6 +10,33 @@ You are require to have an AWS account to be able to build cloud infrastructure.
 
 #### 2. Jenkins on Ubuntu VM
 You will need to install Jenkins and the default plugins to assist your requirements.
+Execute the following commands to install Jenkins:
+
+* Step 1 - Update existing packages.
+`sudo apt-get update`
+
+* Step 2 - Install Java.
+`sudo apt install -y default-jdk`
+
+* Step 3 - Download Jenkins package.
+`wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -`
+
+* Step 4 - Add the following entry in your /etc/apt/sources.list.
+`sudo sh -c 'echo deb https://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'`
+
+* Step 5 -Update your local package index.
+`sudo apt-get update`
+
+* Step 6 - Install Jenkins.
+`sudo apt-get install -y jenkins`
+
+* Step 7 - Start the Jenkins server.
+`sudo systemctl start jenkins`
+
+* Step 8 - Enable the service to load during boot.
+`sudo systemctl enable jenkins`
+`sudo systemctl status jenkins`
+
 
 #### 3. Install Blue Ocean Plugin for Jenkins
 You will need to install the following to use the Blue Ocean plugin:
@@ -22,6 +49,12 @@ You will need to install the following to use the Blue Ocean plugin:
 1. Git Pipeline for Blue Ocean
 1. GitHub Pipeline for Blue Ocean
 1. Pipeline implementation for Blue Ocean
+
+#### 4. Install Aqua MicroScanner for Jenkins
+1. Go to `https://microscanner.aquasec.com/signup` to register for a Aqua MicroScanner token.
+1. Install the Aqua MicroScanner plugin in the Jenkins plugin manager and input the token in the Configure System page.
+1. Install Docker by executing the following command: `sudo apt install -y docker.io`
+1. Restart Jenkins by executing the following command: `sudo systemctl restart jenkins`
 
 ## Prerequisite
 1. A little knowledge of basic commands in Unix terminal.

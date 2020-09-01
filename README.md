@@ -54,6 +54,7 @@ You will need to install the following to use the Blue Ocean plugin:
 1. Go to `https://microscanner.aquasec.com/signup` to register for a Aqua MicroScanner token.
 1. Install the Aqua MicroScanner plugin in the Jenkins plugin manager and input the token in the Configure System page.
 1. Install Docker by executing the following command: `sudo apt install -y docker.io`
+1. Ensure that Jenkins has the proper permissions to access Docker: `sudo usermod -a -G docker jenkins`
 1. Restart Jenkins by executing the following command: `sudo systemctl restart jenkins`
 
 ## Prerequisite

@@ -50,9 +50,11 @@ You will need to install the following to use the Blue Ocean plugin:
 1. GitHub Pipeline for Blue Ocean
 1. Pipeline implementation for Blue Ocean
 
-#### 4. Install AWS Plugin for Jenkins
-You will need to install the following to use the AWS plugin for Jenkins:
-1. Pipeline: AWS Steps
+#### 4. Install and setup AWS Plugin for Jenkins
+You will need to complete the following to use the AWS plugin for Jenkins:
+1. Install `Pipeline: AWS Steps`
+1. Create an AWS IAM user with programmatic access and access to S3 resources.
+1. Create a new credentials with the username as the access key id and the password as the secret access key.
 
 #### 4. Install Aqua MicroScanner for Jenkins
 1. Go to `https://microscanner.aquasec.com/signup` to register for a Aqua MicroScanner token.

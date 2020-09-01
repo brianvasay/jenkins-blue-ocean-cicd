@@ -14,14 +14,14 @@ You will need to install Jenkins and the default plugins to assist your requirem
 #### 3. Install Blue Ocean Plugin for Jenkins
 You will need to install the following to use the Blue Ocean plugin:
 1. Blue Ocean
+1. Blue Ocean Executor Info
+1. Blue Ocean Pipeline Editor
 1. Config API for Blue Ocean
+1. Display URL for Blue Ocean
 1. Events API for Blue Ocean
 1. Git Pipeline for Blue Ocean
 1. GitHub Pipeline for Blue Ocean
 1. Pipeline implementation for Blue Ocean
-1. Blue Ocean Pipeline Editor
-1. Display URL for Blue Ocean
-1. Blue Ocean Executor Info
 
 ## Prerequisite
 1. A little knowledge of basic commands in Unix terminal.

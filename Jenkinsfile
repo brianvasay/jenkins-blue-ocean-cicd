@@ -20,5 +20,13 @@ pipeline {
                  aquaMicroscanner imageName: 'alpine:latest', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html'
               }
          }
+         stage('Upload to AWS') {
+              steps {
+                  withAWS(role: 'iam-role-ec2-to-s3-access-role') {
+                  sh 'echo "Uploading content with AWS creds"'
+                      s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'devt-bvasay-jenkins-pipeline')
+                  }
+              }
+         }
      }
 }
